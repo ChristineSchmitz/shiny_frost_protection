@@ -1,0 +1,220 @@
+variable,distribution,lower,median,upper,unit,description,comment
+approval_costs_stationary_windmachine,posnorm,3000,NA,10000,€,Costs for getting an approval to build a stationary windmachine,NA
+area_performance_frostbuster,posnorm,2,NA,5,ha,Area which could be protected by one tractor-mounted gas heater,NA
+area_performance_frostguard,posnorm,1,NA,3,ha,Area which could be protected by one portable gas heater,NA
+area_performance_mobile_windmachine,posnorm,2,NA,5,ha,Area which could be protected by one mobile windmachine,NA
+area_performance_stationary_windmachine,posnorm,4,NA,6,ha,Area which could be protected by one stationary windmachine,NA
+candle_places_per_ha,posnorm,200,NA,500,candle places,Number of candles needed to protect one ha apple orchard,NA
+candle_price,posnorm,12,NA,15,€/candle,Purchase price of one candle,NA
+costs_fire_damage,posnorm,100,NA,300,€/event,Costs in case of fire damage,NA
+costs_ignition_material,posnorm,0.5,NA,1,€/candle,Costs for ignition material to ignite one candle,NA
+discount_rate,posnorm,2,NA,4,%,The discount rate to be used throughout the project,NA
+disposal_cost_per_candle,norm,1,NA,2,€/candle,Disposal cost for empty candle,NA
+establishment_costs_per_ha,posnorm,30000,NA,68000,€/ha,Cost to prepare and plant a new apple orchard,NA
+fire_damage_risk_candles,tnorm_0_1,0.1,NA,0.25,%/100,Risk of fire damage due to the use of candles,NA
+fire_damage_risk_heaters,tnorm_0_1,0.05,NA,0.2,%/100,Risk of fire damage due to the use of heaters,NA
+first_protection_year,const,4,NA,4,year,Year of cultivation in which the investment in protection takes place,NA
+first_yield_percent,posnorm,35,NA,45,%,Percentage of “mean_yield” which is havested in year “time_to_first_yield_est”,NA
+frost_monitoring_costs,posnorm,200,NA,500,€/year,Costs for frost monitoring,NA
+frostbuster_price,posnorm,10000,NA,25000,€,Purchase price of one tractor-mounted gas heater,NA
+frostguard_price,posnorm,7000,NA,12000,€,Purchase price of one portable gas heater,NA
+fuel_consumption_stationary_windmachine,posnorm,20,NA,30,L/h,Fuel consumption (in litre) of a stationary windmachine per hour,NA
+gas_bottle_deposit,posnorm,60,NA,70,€,Deposit costs per gas bottle,NA
+gas_bottle_fill_price,posnorm,1.8,NA,2.5,€/kg,Price for the gas filled into the bottle,NA
+gas_bottle_volume,const,33,NA,33,kg,Volume of the used gas bottles,NA
+gas_bottles_frostguard,const,4,NA,4,bottles,Number of gas bottles connected to one portable gas heater,NA
+gas_consumption_frostbuster,posnorm,30,NA,35,kg/h,Gas consumption of a tractor-mounted gas heater,NA
+gas_consumption_frostguard,posnorm,10,NA,30,kg/h,Gas consumption of a portable gas heater in,NA
+gas_storage_n_nights,posnorm,3,NA,6,nights,Number of frost nights for which gas should be stored,NA
+heater_price,posnorm,200,NA,250,€,Purchase price of one pellet heater,NA
+heaters_needed_per_ha,posnorm,50,NA,100,heaters/ha,Number of heaters needed to protect one ha apple orchard,NA
+hourly_wage_worker,posnorm,14,NA,22,€,Hourly labour costs,NA
+installation_costs_stationary_windmachine,posnorm,10000,NA,20000,€,Costs to build up a stationary windmachine,NA
+mean_bottle_change_frostguard,posnorm,0.2,NA,0.5,h/frostguard,Workload to change the gas bottles of a tractor-mounted gas heater,NA
+mean_burning_time_candles,posnorm,6,NA,9,h,Burning time of a candle,NA
+mean_candles_changed_per_h,posnorm,50,NA,70,candles/h,Number of candles which one person can change per hour,NA
+mean_candles_extinguished_per_h,posnorm,120,NA,300,candles/h,Number of candles which one person can extinguish per hour,NA
+mean_candles_ignited_per_h,posnorm,120,NA,300,candles/h,Number of candles which one person can ignite per hour,NA
+mean_candles_placed_per_h,posnorm,80,NA,150,candles/h,Number of candles which one person can place per hour,NA
+mean_candles_removed_per_h,posnorm,60,NA,120,candles/h,Number of candles which one person can remove per hour,NA
+mean_cost_change_frost,norm,0.1,NA,0.2,%/100,Production cost change after spring frost,NA
+mean_costs_additional_fertilizer_ut_irrigation,posnorm,200,NA,400,€/ha,Costs for additional plant protection and fertilizer due to washing of by the below-canopy irrigation,NA
+mean_costs_additional_plant_protection_ov_irrigation,posnorm,200,NA,500,€/ha,Costs for additional plant protection and fertilizer due to washing of by the overhead irrigation,NA
+mean_costs_handle_branch_fracture,posnorm,50,NA,150,€/ha,Costs to handle branch fractures,NA
+mean_costs_handle_pseudomonas,posnorm,20,NA,200,€/ha,Costs to handle a pseudomonas infection,NA
+mean_costs_handle_waterlogging,posnorm,200,NA,2000,€/ha,Costs to handle waterlogging due to irrigation,NA
+mean_diesel_price,posnorm,1.7,NA,2,€/L,Purchase price of one litre diesel fuel,NA
+mean_efficiency_candles,tnorm_0_1,0.1,NA,0.8,%/100,Protection efficiency of candles,NA
+mean_efficiency_frostbuster,tnorm_0_1,0.03,NA,0.5,%/100,Protection efficacy of tractor-mounted gas heater,NA
+mean_efficiency_frostguard,tnorm_0_1,0.01,NA,0.2,%/100,Protection efficacy of portable gas heater,NA
+mean_efficiency_heaters,tnorm_0_1,0.05,NA,0.7,%/100,Protection efficacy of heaters,NA
+mean_efficiency_ov_irrigation,tnorm_0_1,0.6,NA,0.99,%/100,Protection efficacy of overhead irrigation,NA
+mean_efficiency_reduce_smaller_problem_candles,tnorm_0_1,0.2,NA,0.4,%/100,Percentage reduction in the protection efficacy of candles due to late ignition,NA
+mean_efficiency_reduce_smaller_problem_frostbuster,tnorm_0_1,0.3,NA,0.6,%/100,Percentage reduction in the protection efficacy of tractor-mounted gas heater due to late start,NA
+mean_efficiency_reduce_smaller_problem_frostguard,tnorm_0_1,0.2,NA,0.4,%/100,Percentage reduction in the protection efficacy of portable gas heater due to late start,NA
+mean_efficiency_reduce_smaller_problem_heaters,tnorm_0_1,0.2,NA,0.5,%/100,Percentage reduction in the protection efficacy of heaters due to late ignition,NA
+mean_efficiency_reduce_smaller_problem_ov_irrigation,tnorm_0_1,0.3,NA,0.6,%/100,Reduced protection efficacy of overhead irrigation,NA
+mean_efficiency_reduce_smaller_problem_ut_irrigation,tnorm_0_1,0.1,NA,0.6,%/100,Reduced protection efficacy of below-canopy irrigation,NA
+mean_efficiency_reduce_smaller_problem_windmachine,tnorm_0_1,0.1,NA,0.4,%/100,Reduced protection efficacy of wind machines eg due to a delayed start of the windmachine,NA
+mean_efficiency_ut_irrigation,tnorm_0_1,0.1,NA,0.5,%/100,Protection efficacy of below-canopy irrigation,NA
+mean_efficiency_windmachine,tnorm_0_1,0.2,NA,0.8,%/100,Protection efficacy of windmachine,NA
+mean_fuel_consumption_mobile_windmachine,posnorm,6,NA,30,L/h,Fuel consumption of a mobile windmachine,NA
+mean_fuel_consumption_tractor_frostbuster,posnorm,5,NA,15,L/h,Fuel consumption of a tractor working with a tractor-mounted gas heater,NA
+mean_harvest_costs,posnorm,0.09,NA,0.11,€/kg,Harvest costs per kg apple,NA
+mean_heater_covers_removed_per_h,posnorm,70,NA,120,covers,Number of storage covers one worker can remove per hour,NA
+mean_heater_deconstruction_time,posnorm,0.1,NA,0.3,h/heater,Workload to deconstruct one heater after use,NA
+mean_heater_preparation_time,posnorm,0.1,NA,0.2,h/heater,Workload to prepare one heater for use,NA
+mean_heaters_ignited_per_h,posnorm,40,NA,50,heaters,Number of heaters one worker can ignite per hour,NA
+mean_maintenance_costs_frostbuster,posnorm,100,NA,300,€/year,Yearly maintenance cost for a tractor-mounted gas heater,NA
+mean_maintenance_costs_frostguard,posnorm,50,NA,200,€/year,Yearly maintenance cost for a portable gas heater,NA
+mean_maintenance_costs_heaters,posnorm,10,NA,50,€/ha,Yearly maintenance cost for heaters,NA
+mean_maintenance_costs_mobile_windmachine,posnorm,200,NA,400,€/year,Yearly maintenance cost for a mobile windmachine,NA
+mean_maintenance_costs_ov_irrigation,posnorm,50,NA,500,€/ha,Yearly maintenance cost for overhead irrigation,NA
+mean_maintenance_costs_stationary_windmachine,posnorm,300,NA,500,€,Yearly maintenance cost for a stationary windmachine,NA
+mean_maintenance_costs_ut_irrigation,posnorm,90,NA,300,€/ha,Yearly maintenance cost for below-canopy irrigation,NA
+mean_n_starts_unnecessary,posnorm,1,NA,3,starts,Number of unnecessary protection starts,NA
+mean_pellet_price,posnorm,0.5,NA,0.7,€/kg,Pellet price,NA
+mean_pellet_refill_time_heaters,posnorm,0.1,NA,0.2,h/heater,Workload to refill a heater with pellets,NA
+mean_production_costs,posnorm,12000,NA,14000,€/ha,General yearly apple production costs,NA
+mean_pump_operating_costs,posnorm,5,NA,15,€/h,Operating costs of the pump,NA
+mean_setup_time_frostbuster,posnorm,0.5,NA,1,h,Setup time before and after tractor-mounted gas heater use,NA
+mean_setup_time_frostguard,posnorm,1,NA,2,h/gas heater,Setup time for a portable gas heater at beginning and end of the frost period,NA
+mean_setup_time_mobile_windmachine,posnorm,2,NA,3,h,Setup time for a mobile windmachine at beginning and end of the frost period,NA
+mean_start_stop_time_mobile_windmachine,posnorm,1,NA,2,h,Workload to start and stop the mobile windmachine,NA
+mean_start_stop_time_stationary_windmachine,posnorm,1,NA,2,h,Workload to start and stop the stationary windmachine,NA
+mean_yield,posnorm,35000,NA,60000,kg/ha,Yield in years without spring frost,NA
+mean_yield_loss_burns_frostbuster,tnorm_0_1,0.05,NA,0.2,%/100,Yield loss in case of plant burns due to tractor-mounted gas heater use,NA
+mean_yield_loss_burns_frostguard,tnorm_0_1,0.05,NA,0.2,%/100,Yield loss in case of plant burns due to portable gas heater use,NA
+mean_yield_loss_frost,tnorm_0_1,0.25,NA,0.8,%/100,Percentage yield loss due to one harmful frost night,NA
+mobile_windmachine_price,posnorm,30000,NA,60000,€,Purchase price of one mobile windmachine,NA
+n_years,const,18,NA,18,years,Number of years considered in the model,NA
+pellet_need_heaters,posnorm,3,NA,5,kg/h,Pellet consumption of one heater,NA
+pellets_in_heater,posnorm,25,NA,35,kg,Amount of pellets which could be filled in one heater,NA
+percentage_funding_irrigation_infrastructure,tnorm_0_1,0.45,NA,0.6,%/100,Percentage of financial support to buid irrigation infrastructure,NA
+percentage_residual_value_frostbuster,tnorm_0_1,0.01,NA,0.3,%/100,Residual value of a tractor-mounted gas heater after 15 years (% of the initial costs),NA
+percentage_residual_value_frostguard,tnorm_0_1,0.01,NA,0.3,%/100,Residual value of a portable gas heater after 15 years (% of the initial costs),NA
+percentage_residual_value_heaters,tnorm_0_1,0.01,NA,0.05,%/100,Residual value of heaters after 15 years (% of the initial costs),NA
+percentage_residual_value_mobile_windmachine,tnorm_0_1,0.01,NA,0.3,%/100,Residual value of a mobile wind machine after 15 years (% of the initial costs),NA
+percentage_residual_value_pond,tnorm_0_1,0.25,NA,0.5,%/100,Residual value of an irrigation pond after 15 years (% of the initial costs),NA
+percentage_residual_value_stationary_windmachine,tnorm_0_1,0.2,NA,0.5,%/100,Residual value of a stationary wind machine after 15 years (% of the initial costs),NA
+planning_cost_frost_protection,posnorm,100,NA,2500,€/plot,Costs to plan the frost protection of an orchard,NA
+pond_costs,posnorm,10,NA,20,€/m³,Costs to build a irrigation pond per m³ volume,NA
+pond_dimensioning_irrigation,posnorm,10,NA,45,h,Hours the overhead irrigation can run with the pond water,NA
+price_increase_frost,posnorm,0.05,NA,0.12,€/kg,Apple price incrase in frost years,NA
+pump_and_filter_costs_ov_irrigation,posnorm,6000,NA,20000,€/pump,Costs for pump and filter for overhead irrigation,NA
+pump_and_filter_costs_ut_irrigation,posnorm,6000,NA,7500,€/pump,Costs for pump and filter for below-canopy irrigation,NA
+resale_value_candles,posnorm,8,NA,10,€/candle,Price which a farmers gets if he resale his unused candles,NA
+risk_branch_fracture_ov_irrigation,tnorm_0_1,0.05,NA,0.1,%/100,Risk of branch fractures due to heavy ice after overhead irrigation,NA
+risk_damage_wrong_conditions_windmachine,tnorm_0_1,0.01,NA,0.1,%/100,Risk of additional damage with the windmachine due to unfavourable weather conditions,NA
+risk_frozen_water_line_ov_irrigation,tnorm_0_1,0.01,NA,0.3,%/100,Risk of protection issues with overhead irrigation due to frozen water lines,NA
+risk_frozen_water_line_ut_irrigation,tnorm_0_1,0.01,NA,0.3,%/100,Risk of protection issues with below-canopy irrigation due to frozen water lines,NA
+risk_ineffective_protection_candles,tnorm_0_1,0.1,NA,0.33,%/100,Risk that the protection with candles is not effective in a frost night,NA
+risk_ineffective_protection_frostbuster,tnorm_0_1,0.3,NA,0.6,%/100,Risk that the protection with the tractor-mounted gas heater is not effective in a frost night,NA
+risk_ineffective_protection_frostguard,tnorm_0_1,0.2,NA,0.7,%/100,Risk that the protection with the portable gas heater is not effective in a frost night,NA
+risk_ineffective_protection_heaters,tnorm_0_1,0.2,NA,0.6,%/100,Risk that the protection with heaters is not effective in a frost night,NA
+risk_ineffective_protection_mobile_windmachine,tnorm_0_1,0.1,NA,0.75,%/100,Risk that the protection with the mobile windmachine is not effective in a frost night,NA
+risk_ineffective_protection_stationary_windmachine,tnorm_0_1,0.1,NA,0.33,%/100,Risk that the protection with the stationary windmachine is not effective in a frost night,NA
+risk_late_start,tnorm_0_1,0.01,NA,0.4,%/100,Risk of starting the protection too late,NA
+risk_missed_preparation,tnorm_0_1,0.01,NA,0.2,%/100,Risk of being not prepared in a frost night,NA
+risk_missed_protection,tnorm_0_1,0.1,NA,0.2,%/100,Risk of missing to protect the orchard in a frost night,NA
+risk_plant_burns_frostbuster,tnorm_0_1,0.05,NA,0.3,%/100,Risk of burnings on leaves and flowers due to tractor-mounted gas heater use,NA
+risk_plant_burns_frostguard,tnorm_0_1,0.1,NA,0.5,%/100,Risk of burnings on leaves and flowers due to portable gas heater use,NA
+risk_pseudomonas_ov_irrigation,tnorm_0_1,0.05,NA,0.2,%/100,Risk of an infection with pseudomonas due to overhead irrigation,NA
+risk_unnecessary_preparation,tnorm_0_1,0.25,NA,0.75,%/100,Risk investing time into the preparation but no frost occurs,NA
+risk_waterlogging_ov_irrigation,tnorm_0_1,0.05,NA,0.2,%/100,Risk of soil waterlogging after overhead irrigation,NA
+risk_waterlogging_ut_irrigation,tnorm_0_1,0.01,NA,0.15,%/100,Risk of soil waterlogging after below-canopy irrigation,NA
+second_yield_percent,posnorm,70,NA,80,%,Percentage of “mean_yield” which is havested in year “time_to_second_yield_est”,NA
+sold_out_risk_candles,tnorm_0_1,0.01,NA,0.2,%/100,Risk that the candles are sold out in spring,NA
+sold_out_risk_gas,tnorm_0_1,0.01,NA,0.3,%/100,Risk that gas bottles are sold out in spring,NA
+sold_out_risk_pellets,tnorm_0_1,0.01,NA,0.3,%/100,Risk that pellets are sold out in spring,NA
+start_stop_time_frostguard,posnorm,0.2,NA,0.3,h/frostguard,Workload to start and stop the portable gas heater,NA
+stationary_windmachine_price,posnorm,50000,NA,70000,€,Purchase price of one stationary windmachine,NA
+storage_cost_per_candle,posnorm,0.25,NA,5,€/candle,Costs for storing the candles over the year,NA
+storage_cost_per_heater,posnorm,5,NA,10,€/heater,Costs for storing the heater over the year,NA
+storage_recommendation,posnorm,3,NA,6,candles/candle place,Candle storage recommendation (candles/candle place),NA
+storage_recommendation_pellets,posnorm,3000,NA,5000,kg/ha,Recommended pellet storage amount for heaters,NA
+supervision_time_frostguard,posnorm,1,NA,3,h,Time the portable gas heater has to be supervised per use,NA
+tech_failure_risk_frostbuster,tnorm_0_1,0.1,NA,0.2,%/100,Risk of protection failure due to a technical issue with the tractor-mounted gas heater,NA
+tech_failure_risk_frostguard,tnorm_0_1,0.1,NA,0.2,%/100,Risk of protection failure due to a technical issue with the portable gas heater,NA
+tech_failure_risk_ov_irrigation,tnorm_0_1,0.05,NA,0.2,%/100,Risk of protection failure due to a technical issue with overhead irrigation,NA
+tech_failure_risk_ut_irrigation,tnorm_0_1,0.05,NA,0.2,%/100,Risk of protection failure due to a technical issue with below-canopy irrigation,NA
+tech_failure_risk_windmachine,tnorm_0_1,0.01,NA,0.1,%/100,Risk of protection failure due to a technical issue with the windmachine,NA
+terrain_correction_price,posnorm,1000,NA,2000,€,Purchase price of an terrain correction for a stationary windmachine,NA
+time_to_first_yield_est,const,2,NA,2,year,Year of cultivation when the orchard reaches “first_yield_percent” of “mean_yield”,NA
+time_to_second_yield_est,const,4,NA,4,year,Year of cultivation when the orchard reaches “second_yield_percent” of “mean_yield”,NA
+transport_costs_field_candles,posnorm,1,NA,3,€/candle,Transport costs to bring candles the field an back,NA
+transport_costs_field_frostguard,posnorm,10,NA,20,€/frostguard,Transport costs to bring the portable gas heater to the orchard,NA
+transport_costs_field_heaters,posnorm,30,NA,50,€/heater,Transport costs to bring the heaters to the orchard,NA
+transport_costs_field_mobile_windmachine,posnorm,15,NA,30,€/windmachine,Transport costs to bring the mobile windmachine to the orchard,NA
+travel_time_field,posnorm,0.1,NA,0.3,h,Travel time to the orchard,NA
+unnecessary_start_risk,tnorm_0_1,0.1,NA,0.4,%/100,Risk of starting the protection although the frost event is not harmful,NA
+var_cv_bottle_change_frostguard,posnorm,17,NA,35,%,Coefficient of variation of the workload to change the gas bottles of a tractor-mounted gas heater,NA
+var_cv_burning_time_candles,posnorm,16,NA,32,%,Coefficient of variation of the burning time of a candle,NA
+var_cv_candle_change,posnorm,20,NA,30,%,Coefficient of variation of the number of candles which one person can change per hour,NA
+var_cv_candle_extingtion,posnorm,12,NA,18,%,Coefficient of variation of the number of candles which one person can extinguish per hour,NA
+var_cv_candle_ignition,posnorm,16,NA,24,%,Coefficient of variation of the number of candles which one person can ignite per hour,NA
+var_cv_candle_placing,posnorm,11,NA,37,%,Coefficient of variation of the number of candles which one person can place per hour,NA
+var_cv_candle_removing,posnorm,13,NA,40,%,Coefficient of variation of the number of candles which one person can remove per hour,NA
+var_cv_cost_change_frost,posnorm,40,NA,101,%,Coefficient of variation of the production cost change after spring frost,NA
+var_cv_costs_additional_fertilizer_ut_irrigation,posnorm,10,NA,20,%,Coefficient of variation of the costs for additional plant protection and fertilizer due to washing of by the below-canopy irrigation,NA
+var_cv_costs_branch_fracture,posnorm,12,NA,30,%,Coefficient of variation of the costs to handle branch fractures,NA
+var_cv_costs_pseudomonas,posnorm,3,NA,11,%,Coefficient of variation of the costs to handle a pseudomonas infection,NA
+var_cv_costs_waterlogging,posnorm,3,NA,28,%,Coefficient of variation of the costs to handle waterlogging due to irrigation,NA
+var_cv_diesel_price,posnorm,1,NA,10,%,Coefficient of variation of the purchase price of one litre diesel fuel,NA
+var_cv_efficiency_candles,posnorm,2,NA,47,%,Coefficient of variation of the protection efficacy of candles,NA
+var_cv_efficiency_frostbuster,posnorm,3,NA,12,%,Coefficient of variation of the protection efficacy of tractor-mounted gas heater,NA
+var_cv_efficiency_frostguard,posnorm,4,NA,22,%,Coefficient of variation of the protection efficacy of portable gas heater,NA
+var_cv_efficiency_heaters,posnorm,3,NA,10,%,Coefficient of variation of the protection efficacy of heaters,NA
+var_cv_efficiency_ov_irrigation,posnorm,0.5,NA,1,%,Coefficient of variation of the protection efficacy of overhead irrigation,NA
+var_cv_efficiency_reduce_smaller_problem_candles,posnorm,4,NA,8,%,Coefficient of variation of the percentage reduction in the protection efficacy of candles due to late ignition,NA
+var_cv_efficiency_reduce_smaller_problem_frostbuster,posnorm,4,NA,8,%,Coefficient of variation of the percentage reduction in the protection efficacy of tractor-mounted gas heater due to late start,NA
+var_cv_efficiency_reduce_smaller_problem_frostguard,posnorm,2,NA,10,%,Coefficient of variation of the percentage reduction in the protection efficacy of portable gas heater due to late start,NA
+var_cv_efficiency_reduce_smaller_problem_heaters,posnorm,3,NA,5,%,Coefficient of variation of the percentage reduction in the protection efficacy of heaters due to late ignition,NA
+var_cv_efficiency_reduce_smaller_problem_ov_irrigation,posnorm,1,NA,2,%,Coefficient of variation of the reduced protection efficacy of overhead irrigation,NA
+var_cv_efficiency_reduce_smaller_problem_ut_irrigation,posnorm,2,NA,3,%,Coefficient of variation of the reduced protection efficacy of below-canopy irrigation,NA
+var_cv_efficiency_reduce_smaller_problem_windmachine,posnorm,7,NA,22,%,Coefficient of variation of the reduced protection efficacy of wind machines eg due to a delayed start of the windmachine,NA
+var_cv_efficiency_ut_irrigation,posnorm,4,NA,12,%,Coefficient of variation of the protection efficacy of below-canopy irrigation,NA
+var_cv_efficiency_windmachine,posnorm,4,NA,11,%,Coefficient of variation of the protection efficacy of windmachine,NA
+var_cv_frost_duration,posnorm,40,NA,100,%,Coefficient of variation of the time with a temperature under 0°C per frost night,Scenario_Rhineland
+var_cv_fuel_frostbuster,posnorm,12,NA,30,%,Coefficient of variation of the fuel consumption of a tractor working with a tractor-mounted gas heater,NA
+var_cv_fuel_windmachine,posnorm,17,NA,27,%,Coefficient of variation of the fuel consumption of a mobile windmachine,NA
+var_cv_harvest_costs,posnorm,14,NA,35,%,Coefficient of variation of the harvest costs per kg apple,NA
+var_cv_heater_cover_removed,posnorm,6,NA,13,%,Coefficient of variation of the number of storage covers one worker can remove per hour,NA
+var_cv_heater_deconstruction,posnorm,15,NA,30,%,Coefficient of variation of the fuel workload to deconstruct one heater after use,NA
+var_cv_heater_ignition,posnorm,7,NA,13,%,Coefficient of variation of the number of heaters one worker can ignite per hour,NA
+var_cv_heater_preparation,posnorm,20,NA,40,%,Coefficient of variation of the workload to prepare one heater for use,NA
+var_cv_loss_burns_frostbuster,posnorm,2,NA,7,%,Coefficient of variation of the yield loss in case of plant burns due to tractor-mounted gas heater use,NA
+var_cv_loss_burns_frostguard,posnorm,2,NA,15,%,Coefficient of variation of the yield loss in case of plant burns due to portable gas heater use,NA
+var_cv_loss_frost,posnorm,3,NA,22,%,Coefficient of variation of the percentage yield loss due to one harmful frost night,NA
+var_cv_maintenance_costs_ut_irrigation,posnorm,15,NA,30,%,Coefficient of variation of the yearly maintenance cost for below-canopy irrigation,NA
+var_cv_maintenance_frostbuster,posnorm,15,NA,60,%,Coefficient of variation of the yearly maintenance cost for a tractor-mounted gas heater,NA
+var_cv_maintenance_frostguard,posnorm,24,NA,48,%,Coefficient of variation of the yearly maintenance cost for a portable gas heater,NA
+var_cv_maintenance_heaters,posnorm,10,NA,20,%,Coefficient of variation of the yearly maintenance cost for heaters,NA
+var_cv_maintenance_mobile_windmachine,posnorm,10,NA,20,%,Coefficient of variation of the yearly maintenance cost for a mobile windmachine,NA
+var_cv_maintenance_ov_irrigation,posnorm,11,NA,22,%,Coefficient of variation of the yearly maintenance cost for overhead irrigation,NA
+var_cv_maintenance_stationay_windmachine,posnorm,8,NA,15,%,Coefficient of variation of the yearly maintenance cost for a stationary windmachine,NA
+var_cv_n_nights_frost,posnorm,50,NA,110,%,Coefficient of variation of the number of frost nights during blossom in a year with frost,Scenario_Rhineland
+var_cv_pellet_price,posnorm,1,NA,5,%,Coefficient of variation of the pellet price,NA
+var_cv_pellet_refill_time_heaters,posnorm,20,NA,40,%,Coefficient of variation of the workload to refill a heater with pellets,NA
+var_cv_plant_protection_ov_irrigation,posnorm,8,NA,17,%,Coefficient of variation of the costs for additional plant protection and fertilizer due to washing of by the overhead irrigation,NA
+var_cv_post_harvest_costs,posnorm,14,NA,35,%,Coefficient of variation of post-harvest costs (eg sorting and storage),NA
+var_cv_price,posnorm,12,NA,24,%,Coefficient of variation of the producer price at the time of sale of the fruits,NA
+var_cv_production_costs,posnorm,13,NA,22,%,Coefficient of variation of the general yearly apple production costs,NA
+var_cv_pump_operating_costs,posnorm,30,NA,60,%,Coefficient of variation of the operating costs of the pump,NA
+var_cv_setup_time_frostbuster,posnorm,40,NA,57,%,Coefficient of variation of the setup time before and after tractor-mounted gas heater use,NA
+var_cv_setup_time_frostguard,posnorm,20,NA,40,%,Coefficient of variation of the setup time for a portable gas heater at beginning and end of the frost period,NA
+var_cv_setup_time_mobile_windmachine,posnorm,20,NA,40,%,Coefficient of variation of the setup time for a mobile windmachine at beginning and end of the frost period,NA
+var_cv_start_stop_time_mobile_windmachine,posnorm,20,NA,40,%,Coefficient of variation of the workload to start and stop the mobile windmachine,NA
+var_cv_start_stop_time_stationary_windmachine,posnorm,12,NA,24,%,Coefficient of variation of the workload to start and stop the stationary windmachine,NA
+var_cv_unnecessary_starts,posnorm,30,NA,60,%,Coefficient of variation of the number of unnecessary protection starts,NA
+var_cv_yield,posnorm,6,NA,13,%,Coefficient of variation of the yield in years without spring frost,NA
+water_lines_on_field_costs_ov_irrigation,posnorm,10000,NA,15000,€/ha,Costs for the water lines and sprinklers for overhead irrigation on the field,NA
+water_lines_on_field_costs_ut_irrigation,posnorm,8000,NA,12000,€/ha,Costs for the water lines and sprinklers for below-canopy irrigation on the field,NA
+water_need_ov_irrigation,posnorm,30,NA,42,m³/h/ha,Water need for overhead irrigation,NA
+water_need_ut_irrigation,posnorm,20,NA,40,m³/h/ha,Water need for below-canopy irrigation,NA
+water_price,posnorm,1,NA,2,€/m³,Water price,NA
+well_drilling_costs,posnorm,40000,NA,60000,€/well,Costs for drilling a well,NA
+wind_risk_ov_irrigation,tnorm_0_1,0.1,NA,0.33,%/100,Risk of too windy weather for overhead irrigation during the frost,NA
+wind_risk_ut_irrigation,tnorm_0_1,0.1,NA,0.33,%/100,Risk of too windy weather for below-canopy irrigation during the frost,NA
+yield_damage_frost_ov_irrigation_failure,tnorm_0_1,0.5,NA,0.9,%/100,Yield damage in case of protection failure with overhead irrigation,NA
+yield_damage_wrong_conditions_windmachine,tnorm_0_1,0.1,NA,0.3,%/100,Yield damage in case of windmachine use under unfavourable conditions,NA
