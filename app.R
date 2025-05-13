@@ -40,7 +40,7 @@ ui <- fluidPage(
   navbarPage(title = (span(img(src="Bild1.png", height =100),"Entscheidungshilfe Forstschutz -Apfel-")),
              theme = app_theme,
              header=tags$head(tags$style(type='text/css', ".irs-grid-text { font-size: 10pt; }")),
-             tabPanel(title = (span(img(src="cold.png", height =80),"Modell")),
+             tabPanel(title = (span(img(src="cold2.png", height =70),"Modell")),
                       sidebarLayout(
                         sidebarPanel(
                           sliderInput("frost_risk",
@@ -110,7 +110,28 @@ ui <- fluidPage(
                                        choices = list("Ja "=1, "Nein"=0),
                                        inline = TRUE,
                                        #width = "400px",
-                                       selected = 1)
+                                       selected = 1),
+                          checkboxGroupInput( 
+                            "Protection_measures", 
+                            "Frostschutzmaßnahmen im Vergleich:", 
+                            c("Kein Frostschutz" ="no_protection",
+                              "Überkonenberegnung" = "ov_irrigation",
+                              "Unterkronenbergnung" = "ut_irrigation",
+                               "Kerzen" = "candles",
+                              "Frostbuster"="frostbuster",
+                              "Frostguard"="frostguard",
+                              "Pelletöfen"="heaters",
+                              "Mobile Windmachine"="mobile_windmachine",
+                              "Stationäre Windmachine"="stationary_windmachine"
+                              ),
+                            selected = "no_protection"
+                          ), 
+                          radioButtons("plot_type",
+                                       "Darstellungsweise",
+                                       choices = list("Boxplot"="boxplot", "Verteilung"="smooth_simple_overlay"),
+                                       inline = TRUE,
+                                       #width = "400px",
+                                       selected = "smooth_simple_overlay"),
                           # radioButtons("hailnet",
                           #              "Hagelnetz",
                           #              choices = list("Ja "=1, "Nein"=0),
@@ -177,8 +198,8 @@ ui <- fluidPage(
                         
                         # Show a plot of the generated distribution
                         mainPanel(
-                          plotOutput("DA_frost",height = "800px"),
-                          tableOutput("test_table")
+                          plotOutput("DA_frost",height = "800px")#,
+                          #tableOutput("test_table")
                           #plotOutput("distPlot2")
                         ))),
              tabPanel(title = (span(img(src="data.png", height =80),"Datenübersicht")),
@@ -188,6 +209,16 @@ ui <- fluidPage(
                       mainPanel(
                         #tags$h2(i18n("Edit data"), align = "center"),
                         edit_data_ui(id = "id")#,
+                        #verbatimTextOutput("result")
+                        
+                        #dataTableOutput("input_datasheet")#,
+                        #plotOutput("distPlot2")
+                      )),
+             tabPanel(title = (span(img(src="InfoI.png", height =80),"Infos")),
+                      
+                      mainPanel(
+                        #tags$h2(i18n("Edit data"), align = "center"),
+                        uiOutput("text")#,
                         #verbatimTextOutput("result")
                         
                         #dataTableOutput("input_datasheet")#,
@@ -308,9 +339,11 @@ server <- function(input, output) {
     #         legend.position = "none")+
     #   xlab("Qualitätsertrag [t/ha]")+
     #   ylab("Häufigkeit")
+    vars_plots<-c(paste0("result_", input$Protection_measures))
     Plot_b<-plot_distributions(mcSimulation_object = frost_protection_mc_simulation,
-                               vars = c("result_no_protection"),
-                               method = 'smooth_simple_overlay',
+                               vars = vars_plots,
+                               #method = 'smooth_simple_overlay',
+                               method = input$plot_type,
                                base_size = 7)+
       theme(axis.text = element_text(colour = "black", size = 10),
             axis.title = element_text(colour = "black", size = 10),
@@ -335,20 +368,55 @@ server <- function(input, output) {
     
   })
   
-  output$test_table<- renderTable({
-    variable<-c("frost_risk", "mean_frost_duration", "mean_n_nights_frost", "mean_post_harvest_costs", "mean_price", "share_harmful_frost", "water_withdrawl_fee", "plot_area","groundwater_well", "terrain_correction_needed", "existing_irrigation_pond")
-    distribution<-c("tnorm_0_1", "posnorm"  , "posnorm" ,  "posnorm"  , "posnorm"   ,"tnorm_0_1" , "posnorm", "const", "const", "const", "const")
-    lower<-c(input$frost_risk[1],input$mean_frost_duration[1],input$mean_n_nights_frost[1], input$mean_post_harvest_costs[1], input$mean_price[1], input$share_harmful_frost[1]/100, input$water_withdrawl_fee[1], input$plot_area, input$groundwater_well, 0, input$existing_irrigation_pond)
-    median<-rep(NA, 11)
-    upper<-c(input$frost_risk[2],input$mean_frost_duration[2],input$mean_n_nights_frost[2], input$mean_post_harvest_costs[2], input$mean_price[2], input$share_harmful_frost[2]/100, input$water_withdrawl_fee[2], input$plot_area, input$groundwater_well, 0, input$existing_irrigation_pond)
-    unit<-c("%/100", "h", "nights", "€/kg", "€/kg", "%", "€/m³", "ha","value","value","value")
-    Frost_slider_input<-data.frame(variable,distribution,lower,median,upper,unit)
-    #orchard_data<-read.csv2("2024_test_apple/test_input.csv", colClasses = c("character", "character", "numeric", "character","numeric", "character"), sep = ";", dec = ".")
-    #Apple_prediction_input_raw<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
-    Frost_input_all<-rbind(edited_r()[1:6], Frost_slider_input)
-    Frost_input_all[1:5,]})
+  # output$test_table<- renderTable({
+  #   variable<-c("frost_risk", "mean_frost_duration", "mean_n_nights_frost", "mean_post_harvest_costs", "mean_price", "share_harmful_frost", "water_withdrawl_fee", "plot_area","groundwater_well", "terrain_correction_needed", "existing_irrigation_pond")
+  #   distribution<-c("tnorm_0_1", "posnorm"  , "posnorm" ,  "posnorm"  , "posnorm"   ,"tnorm_0_1" , "posnorm", "const", "const", "const", "const")
+  #   lower<-c(input$frost_risk[1],input$mean_frost_duration[1],input$mean_n_nights_frost[1], input$mean_post_harvest_costs[1], input$mean_price[1], input$share_harmful_frost[1]/100, input$water_withdrawl_fee[1], input$plot_area, input$groundwater_well, 0, input$existing_irrigation_pond)
+  #   median<-rep(NA, 11)
+  #   upper<-c(input$frost_risk[2],input$mean_frost_duration[2],input$mean_n_nights_frost[2], input$mean_post_harvest_costs[2], input$mean_price[2], input$share_harmful_frost[2]/100, input$water_withdrawl_fee[2], input$plot_area, input$groundwater_well, 0, input$existing_irrigation_pond)
+  #   unit<-c("%/100", "h", "nights", "€/kg", "€/kg", "%", "€/m³", "ha","value","value","value")
+  #   Frost_slider_input<-data.frame(variable,distribution,lower,median,upper,unit)
+  #   #orchard_data<-read.csv2("2024_test_apple/test_input.csv", colClasses = c("character", "character", "numeric", "character","numeric", "character"), sep = ";", dec = ".")
+  #   #Apple_prediction_input_raw<-rbind(Apple_prediction_input_csv, Apple_prediction_slider_input)
+  #   Frost_input_all<-rbind(edited_r()[1:6], Frost_slider_input)
+  #   Frost_input_all[1:5,]})
 
   output$input_datasheet<-DT::renderDT(rbind(Apple_input[1:7], Apple_estimation[1:7]))
+  
+  output$text <- renderUI({
+    url <- a("Experimentierfelds Suedwest", href="https://ef-sw.de")
+    url_b <- a("https://doi.org/10.1016/j.agsy.2024.104255", href="https://doi.org/10.1016/j.agsy.2024.104255")
+    url_c <- a("zur Verfügung", href="https://zenodo.org/records/11473204")
+    logo<-img(src="BMEL_BLE.png", height =200)
+    HTML(paste("<b>Entwicklung der App:</b> Christine Schmitz<sup>1,2</sup><br>",
+               "<b>Entwicklung des Modells:</b> Christine Schmitz<sup>1,2</sup>, Lars Zimmermann<sup>1,2</sup>, Katja Schiffers<sup>2</sup>,Cory Whitney<sup>2</sup>, Martin Balmer<sup>1</sup>, Eike Luedeling<sup>2</sup> <br>",
+               "<br>",
+               "<sup>1</sup>Dienstleistungszentrum Ländlicher Raum Rheinpfalz, Campus Klein-Altendorf 2, 53359 Rheinbach, Germany <br>",
+               "<sup>2</sup>INRES – Horticultural Sciences, University of Bonn, Auf dem Hügel 6, 53121 Bonn, Germany.",
+               "<br>",
+               "Kontakt: christine.schmitz@dlr.rlp.de<br>",
+               "<br>",
+               "<b>Idee hinter dem Modell:</b><br>",
+               "Ziel des Modells ist der wirtschafliche Vergleich verschiedener aktiver Frostschutzmaßnahmen für den Apfelanbau<br>",
+               "<br>",
+               "<b>Methodik</b><br>",
+               "Das Modell basiert auf der Methodik der Entscheidungsanalyse. Dies beinhaltet eine Erarbeitung der Modellgrundlage und Inputwerte mit Experten aus der Obstbranche, die Verwendung vom Wertebereichen als Inputvariablen im Rahmen einer Monte-Carlo Simulation.<br>",
+               "<br>",
+               "<b>weitere Infos</b><br>",
+               "Mit dem Modell berchnete Ergebnisse wurden in Agrigultural Systems veröffentlicht: Christine Schmitz, Lars Zimmermann, Katja Schiffers, Cory Whitney, Martin Balmer, Eike Luedeling, 2025. Model-based decision support for the choice of active spring frost protection measures in apple production. Agricultural Systems 224, 104255. ",
+               url_b,
+               "<br>",
+               "Der Code für das Entscheidungsmodell steht ebenfalls ",
+               url_c,
+               ".<br>",
+               "<br>",
+               "<b>Förderung</b><br>",
+               "Die Entwicklung des Modelles und der App wurde im Rahmen des<br>",
+               url,
+               " durchgeführt und wurde vom Bundesministerium für Landwirtschaft und Ernährung gefördert (Förderkennzeichen 28DE111B22)<br>",
+               logo,
+               sep = ""))
+  })
 }
 
 # Run the application 
