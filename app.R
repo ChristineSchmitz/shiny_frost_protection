@@ -37,7 +37,7 @@ ui <- fluidPage(
   theme = app_theme,
   # Application title
   #titlePanel(),
-  navbarPage(title = (span(img(src="Bild1.png", height =100),"Entscheidungshilfe Forstschutz -Apfel-")),
+  navbarPage(title = (span(img(src="Bild1.png", height =100),"Entscheidungshilfe Frostschutz -Apfel-")),
              theme = app_theme,
              header=tags$head(tags$style(type='text/css', ".irs-grid-text { font-size: 10pt; }")),
              tabPanel(title = (span(img(src="cold2.png", height =70),"Modell")),
@@ -113,7 +113,7 @@ ui <- fluidPage(
                                        selected = 1),
                           checkboxGroupInput( 
                             "Protection_measures", 
-                            "Frostschutzmaßnahmen im Vergleich:", 
+                            "Frostschutzmaßnahmen im Vergleich: max. 8 auswählen", 
                             c("Kein Frostschutz" ="no_protection",
                               "Überkonenberegnung" = "ov_irrigation",
                               "Unterkronenbergnung" = "ut_irrigation",
@@ -128,7 +128,7 @@ ui <- fluidPage(
                           ), 
                           radioButtons("plot_type",
                                        "Darstellungsweise",
-                                       choices = list("Boxplot"="boxplot", "Verteilung"="smooth_simple_overlay"),
+                                       choices = list("Boxplot"="boxplot", "Verteilung"="smooth_simple_overlay", "Histogramm"="hist_simple_overlay"),
                                        inline = TRUE,
                                        #width = "400px",
                                        selected = "smooth_simple_overlay"),
@@ -214,7 +214,7 @@ ui <- fluidPage(
                         #dataTableOutput("input_datasheet")#,
                         #plotOutput("distPlot2")
                       )),
-             tabPanel(title = (span(img(src="InfoI.png", height =80),"Infos")),
+             tabPanel(title = (span(img(src="Info.png", height =80),"Infos")),
                       
                       mainPanel(
                         #tags$h2(i18n("Edit data"), align = "center"),
@@ -260,10 +260,14 @@ server <- function(input, output) {
     ),
     n_column = 2,
     modal_size = "l",
+    #dt_options = list(pageLength = 5),
     modal_easy_close = TRUE,
     reactable_options = list(
       defaultColDef = colDef(filterable = TRUE),
       selection = "single",
+      defaultPageSize = 25,
+      showPageSizeOptions = T,
+      pageSizeOptions = c(10, 25, 50, 100),
       columns = list(
         lower = colDef(name = "Untere", style = list(fontWeight = "bold")),
         upper = colDef(name = "Obere", style = list(fontWeight = "bold"))),
@@ -271,6 +275,7 @@ server <- function(input, output) {
       compact = TRUE,
       searchable = TRUE,
       highlight = TRUE
+      
     )
   )
   
