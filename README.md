@@ -9,7 +9,7 @@ In short, the model was developed to show how active frost protection measures d
 To run the app locally on your computer, you need R and the packages shiny[^2], shinyWidgets[^3], datamods[^4], bslib[^5], reactable[^6], decisionSupport[^7] and tidyverse[^8].
 
 ## Repository content
-[`www`](https://github.com/ChristineSchmitz/shiny_frost_protection/tree/main/www)is folder where all pictures needed in the App are stored. 
+[`www`](https://github.com/ChristineSchmitz/shiny_frost_protection/tree/main/www)is a folder where all pictures needed in the App are stored. 
 
 [`shiny_frost_protection.Rproj`](https://github.com/ChristineSchmitz/shiny_frost_protection/blob/main/shiny_frost_protection.Rproj) is the R project file for running the app
 
