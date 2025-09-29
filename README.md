@@ -28,7 +28,7 @@ Thanks to [Lars Zimmermann](https://github.com/Lars-Zimmermann), [Katja Schiffer
 This work was part of the [Experimentierfeld Südwest](https://ef-sw.de/) funded by the German Federal Ministry of Food and Agriculture [grant number: 28DE111B22].
 
 ## References
-[^1]Schmitz, C.,Zimmermann, L.,Schiffers, K.,Whitney, C.,Balmer, M.,Luedeling, E.,2025. Model-based decision support forthechoice ofactive spring frostprotection measures inapple production. Agric. Syst.224,104255. https://doi.org/10.1016/j. agsy.2024.104255.
+[^1]: Schmitz, C.,Zimmermann, L.,Schiffers, K.,Whitney, C.,Balmer, M.,Luedeling, E.,2025. Model-based decision support forthechoice ofactive spring frostprotection measures inapple production. Agric. Syst.224,104255. https://doi.org/10.1016/j. agsy.2024.104255.
 [^2]: Chang W, Cheng J, Allaire J, Sievert C, Schloerke B, Xie Y, Allen J, McPherson J, Dipert A, Borges B (2025).
   _shiny: Web Application Framework for R_. R package version 1.11.1,
   <https://CRAN.R-project.org/package=shiny>.
