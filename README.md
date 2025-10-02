@@ -1,7 +1,7 @@
 # Shiny App for a decision model for the choice of frost protection measures
 
 ## Background
-We developed this Shiny App to make our [decision support model for the choice of frost protection measures] (https://doi.org/10.5281/zenodo.11473204) for apple orchards usable for interested people in the field of horticulture. 
+We developed this Shiny App to make our [decision support model for the choice of frost protection measures](https://doi.org/10.5281/zenodo.11473204) for apple orchards usable for interested people in the field of horticulture. 
 A detailed description of the model is published in the research article [Model-based decision support for the choice of active spring frost protection measures in apple production](https://doi.org/10.1016/j.agsy.2024.104255) (Schmitz et al., 2025)[^1]
 In short, the model was developed to show how active frost protection measures differ in their economic performance and yield protection efficacy. The frost protection measures in the comparison are overhead and below-canopy irrigation, stationary and mobile wind machines, pellet heaters, candles as well as tractor-mounted and portable gas heaters. 
 
