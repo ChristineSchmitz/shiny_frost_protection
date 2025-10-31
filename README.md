@@ -1,7 +1,7 @@
 # Shiny App for a decision model for the choice of frost protection measures
 
 ## Background
-We developed this Shiny App to make our [decision support model for the choice of frost protection measures] (https://doi.org/10.5281/zenodo.11473204) for apple orchards usable for interested people in the field of horticulture. 
+We developed this Shiny App to make our [decision support model for the choice of frost protection measures](https://doi.org/10.5281/zenodo.11473204) for apple orchards usable for interested people in the field of horticulture. 
 A detailed description of the model is published in the research article [Model-based decision support for the choice of active spring frost protection measures in apple production](https://doi.org/10.1016/j.agsy.2024.104255) (Schmitz et al., 2025)[^1]
 In short, the model was developed to show how active frost protection measures differ in their economic performance and yield protection efficacy. The frost protection measures in the comparison are overhead and below-canopy irrigation, stationary and mobile wind machines, pellet heaters, candles as well as tractor-mounted and portable gas heaters. 
 
@@ -9,7 +9,7 @@ In short, the model was developed to show how active frost protection measures d
 To run the app locally on your computer, you need R and the packages shiny[^2], shinyWidgets[^3], datamods[^4], bslib[^5], reactable[^6], decisionSupport[^7] and tidyverse[^8].
 
 ## Repository content
-[`www`](https://github.com/ChristineSchmitz/shiny_frost_protection/tree/main/www)is folder where all pictures needed in the App are stored. 
+[`www`](https://github.com/ChristineSchmitz/shiny_frost_protection/tree/main/www)is a folder where all pictures needed in the App are stored. 
 
 [`shiny_frost_protection.Rproj`](https://github.com/ChristineSchmitz/shiny_frost_protection/blob/main/shiny_frost_protection.Rproj) is the R project file for running the app
 
@@ -28,7 +28,7 @@ Thanks to [Lars Zimmermann](https://github.com/Lars-Zimmermann), [Katja Schiffer
 This work was part of the [Experimentierfeld Südwest](https://ef-sw.de/) funded by the German Federal Ministry of Food and Agriculture [grant number: 28DE111B22].
 
 ## References
-[^1]Schmitz, C.,Zimmermann, L.,Schiffers, K.,Whitney, C.,Balmer, M.,Luedeling, E.,2025. Model-based decision support forthechoice ofactive spring frostprotection measures inapple production. Agric. Syst.224,104255. https://doi.org/10.1016/j. agsy.2024.104255.
+[^1]: Schmitz, C.,Zimmermann, L.,Schiffers, K.,Whitney, C.,Balmer, M.,Luedeling, E.,2025. Model-based decision support forthechoice ofactive spring frostprotection measures inapple production. Agric. Syst.224,104255. https://doi.org/10.1016/j. agsy.2024.104255.
 [^2]: Chang W, Cheng J, Allaire J, Sievert C, Schloerke B, Xie Y, Allen J, McPherson J, Dipert A, Borges B (2025).
   _shiny: Web Application Framework for R_. R package version 1.11.1,
   <https://CRAN.R-project.org/package=shiny>.
