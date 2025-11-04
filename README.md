@@ -1,4 +1,5 @@
 # Shiny App for a decision model for the choice of frost protection measures
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17520406.svg)](https://doi.org/10.5281/zenodo.17520406)
 
 ## Background
 We developed this Shiny App to make our [decision support model for the choice of frost protection measures](https://doi.org/10.5281/zenodo.11473204) for apple orchards usable for interested people in the field of horticulture. 
